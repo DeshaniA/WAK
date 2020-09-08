@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+.container {
+  height: 200px;
+  position: relative;
+
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+ }
+
+.card{
+    height: 200px;
+    position: relative;
+    border: 3px solid black;
+
+}
+</style>
+
+<div class="card">
+  <div class="card-body">
+      <h3>Business Energy Consultancy - 1st Investigation</h3>
+        In business Energy consultancy our company initially providing the 1st investigation to your business place.
+        We are providing the solutions and after the 1st investigation you can decide whether you want to work with our company.
+        For the first investigation we will charge Rs.5000.00.
+  </div>
+</div>
+
+<br><br>
+
+<h3>Buy Now 1st Investigation Package</h3>
+
+<div class="container">
+  <div class="center">
+   <a href="/form/" class="btn btn-warning">Buy Now</a>
+  </div>
+</div>
+
+{% endblock %}

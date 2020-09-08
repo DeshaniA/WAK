@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p>Energy consulting is a sub-discipline of environmental consulting that focuses on optimizing a business' energy usage,
+    as well as the sources from which the actual energy is derived. Energy consulting is often centered on reducing operational costs.
+
+    Energy consultancy can be done for domestic places, business places and office places.
+    Choose the one of the below category to proceed with your energy consultancy.
+</p>
+
+
+
+
+<div class="card-deck">
+  <div class="card">
+      <div class="card-body">
+          <h5 class="card-title">Domestic Place</h5>
+          <p class="card-text">In this Category we will do our energy consultancy for your domestic places.
+
+            Press Submit button if you need energy consultancy to be done in your domestic place.</p>
+           <a href="/domestic/" class="btn btn-primary">Submit</a>
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-body">
+          <h5 class="card-title">Business Place</h5>
+          <p class="card-text">In this Category we will do our energy consultancy for your business places.
+            For the first investigation we will charge Rs.5000.00. Press Submit button if you need energy consultancy to be done in your business place.</p>
+          <a href="/business/" class="btn btn-primary">Submit</a>
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-body">
+          <h5 class="card-title">Office Place</h5>
+          <p class="card-text">In this Category we will do our energy consultancy for your office places.
+            For the first investigation we will charge Rs.3000.00. Press Submit button if you need energy consultancy to be done in your office place.</p>
+         <a href="/office/" class="btn btn-primary">Submit</a>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
