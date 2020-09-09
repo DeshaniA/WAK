@@ -1,0 +1,419 @@
+/* Import fonts from font.css file*/
+@import url("./font.css");
+
+/* css variables */
+@import url("./partial/variables.css");
+
+/* main header start */
+
+.navigation{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+.container-top{
+    height: 15vh;
+    background-color: rgb(255, 251, 251);
+}
+
+.container-top .logo .TAD-logo{
+    max-width: 150px;
+    max-height: 100px;
+    display: inline-block;
+}
+
+.container-top .logo{
+    float: left;
+}
+
+.container-top .header-text{
+    text-align: right;
+
+}
+
+.header-topic{
+    display: inline-block;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    list-style-type: none;
+    margin-right: 20px;
+    margin-top: 10px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.topic{
+    color: var(--primary-color);
+    font-weight: bold;
+    font-family: var(--roboto);
+    font-size: 20px;
+}
+
+.content{
+    color: var(--title-color);
+    font-family: var(--roboto);
+}
+/* main header end */
+
+
+/* navigation bar start */
+.navbar .collapse .navbar-nav .nav-item .item{
+    color: whitesmoke;
+}
+
+.navbar .collapse .navbar-nav .nav-item .item:hover{
+    color: rgb(230, 91, 26);
+}
+
+.navbar .collapse .navbar-nav .nav-item .active-item{
+    color: var(--primary-color2);
+    font-weight: bold;
+}
+
+.navbar .collapse .form-inline .btn-outline-info:hover{
+    background-color: var(--primary-color2);
+    
+}
+
+.navbar .collapse .form-inline .login{
+    margin: 20px;
+}
+
+.navbar .collapse .form-inline .login-active{
+    margin: 20px;
+    background: var(--gradient-color);
+    color: whitesmoke;
+}
+
+/* navigation bar end */
+
+/* main banner start */
+
+.main-banner{
+    position: relative;
+}
+.banner{
+    width: 100%;
+    height: auto;
+}
+
+.main-banner .welcome-text{
+    color: var(--primary-color2);
+    text-align: center;
+    position: absolute;
+    width: 60%;
+    top: 10%;
+    right: 20%;
+    font-weight: bold;
+}
+
+.main-banner .welcome-text .company-title{
+    color: whitesmoke;
+    text-shadow: yellow;
+    font-weight: bold;
+}
+
+.main-banner .banner-button{
+    position: absolute;
+    width: 40%;
+    bottom:25%;
+    right: 30%;
+}
+
+.main-banner .banner-button .hire-service{
+    width: 150px;
+    height: 100%;
+    margin-bottom: 5px;
+    float: left;
+    color: whitesmoke;
+    background:var(--gradient-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.main-banner .banner-button .hire-service:hover{
+    background: none;
+}
+
+
+.main-banner .banner-button .register{
+    width: 150px;
+    height: 100%;
+    margin-left: 0%;
+    float: right;
+    color: whitesmoke;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.main-banner .banner-button .register:hover{
+    background: var(--gradient-color);
+}
+
+
+/* main banner end */
+
+
+/* services tab start */
+
+.all-services{
+    width: 100%;
+    height: auto;
+    position: relative;
+    
+}
+
+.all-services .container-fluid .row .col-lg-3 > .single-service{
+    border: 2px solid var(--border-color);
+    text-align: center;
+    padding: 10px;
+    margin: 50px 0px;
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+
+}
+
+.all-services .container-fluid .row .col-lg-3 > .single-service .single-service-img > img {
+    width: 90%;
+}
+
+.all-services .container-fluid .row .col-lg-3 > .single-service:hover{
+    box-shadow: var(--box-shadow);
+    scale: (1.5);
+}
+
+
+
+
+
+
+.all-services .feedback-tab{
+    background: var(--gradient-color);
+    width: 90%;
+    height: 50px;
+    position: absolute;
+    top: -25px;
+    right: 5%;
+}
+
+.all-services .feedback-tab .feedback-content{
+    color: whitesmoke;
+    float: left;
+    justify-content: center;
+    margin: 10px 20px;
+    font-weight: bold;
+}
+
+.all-services .feedback-tab .feedback-button .feedback{
+    width: 150px;
+    height: 100%;
+    margin-left: 0%;
+    float: right;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+/* services tab end */
+
+/* project banner start */
+
+.project-banner{
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background: red;
+}
+
+.project-banner .project-text{
+    position: absolute;
+    width: 60%;
+    top: 10px;
+    left: 20%;
+    border-bottom: 2px solid whitesmoke;
+    justify-content: center;
+}
+
+.project-banner .project-text .project-topic{
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.project-banner .project-banner-img .background-img{
+    width: 100%;
+    height: 90vh;
+}
+
+.project-banner .project-carousel{
+    width: 80%;
+    position: absolute;
+    top: 10vh;
+    left: 10%;
+    
+}
+
+.project-banner .project-carousel .carousel .carousel-inner .carousel-item .project-img{
+    width: 80%;
+    height: 70vh;
+}
+/* project banner end */
+
+
+/* About Us banner start */
+
+.about-us-banner{
+    width: 100%;
+    height: auto;
+    background: url(../img/about-us-bg.jpg);
+}
+
+.about-us{
+    position: relative;
+    width: 100%;
+    height: auto;
+    
+}
+
+.about-us .about-us-topic{
+    margin: 5px;
+    top: 30px;
+    left: 20px;
+
+}
+
+.about-us .about-us-topic .topic-group .para1{
+    justify-content: center;
+}
+
+.about-us .about-us-topic .topic-group .para1 .p1{
+    color: var(--title-color);
+    font-weight: bold;
+}
+
+.about-us .about-us-topic .topic-group .how-we-work .h-line{
+    background: var(--primary-color2);
+    height: 40px;
+    width: 5px;
+    float: left;
+    margin: 5px;
+}
+
+.about-us .about-us-topic .topic-group .how-we-work .we-work-text{
+    justify-content: center;
+    width: 250px;
+}
+
+.about-us .about-us-topic .topic-group .how-we-work .we-work-text .text1{
+    color: var(--title-color);
+    font-weight: bold;
+}
+
+.about-us .tags-area .working-card .working-card-img{
+    float: left;
+}
+
+.about-us .tags-area .container-fluid .row .working .row > .working-card{
+    border: 1px solid var(--border-color);
+    text-align: center;
+    padding: 10px;
+    margin: 20px 10px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    scale: (1.1);
+}
+
+.about-us .tags-area .container-fluid .row .side .working-area-sideimg > .side-img{
+    width: 100%;
+    height: auto;
+}
+
+/* About Us banner end */
+
+/* contact area start */
+
+.contact-area{
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: black;
+}
+
+.contact-area .social-media{
+    display: inline-flex;
+    position: relative;
+    width: 60%;
+    height: auto;
+    left: 20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.contact-area .social-media .single-icon{
+    width: 16.666%;
+}
+
+.contact-area .social-media .single-icon .social-link .icon{
+    width: 50px;
+    height: auto;
+}
+
+.location .container-fluid .row .clogo .company-logo{
+    width: 100%;
+    height: auto;
+}
+
+.location .container-fluid .row .contact-about .single-contact-about{
+    width: 100%;
+    height: 20%;
+    position: relative;
+    
+}
+
+.location .container-fluid .row .contact-about .single-contact-about .contact-about-img .about-icon{
+    
+    float: left;
+    
+}
+
+.location .container-fluid .row .contact-about .single-contact-about .contact-about-content{
+    height: 50px;
+}
+
+.location .container-fluid .row .contact-about .single-contact-about .contact-about-content .content{
+    color: whitesmoke;
+}
+
+
+
+
+
+/* contact area end */
+
+
+
+.footer{
+    display: inline-flex;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    background: rgb(49, 47, 47);
+}
+
+
+
+.footer .footer-text .footer-name {
+    color: whitesmoke;
+    margin-top: 10px;
+}
+.footer .programmer-name .prog-name{
+    color: red;
+    margin-top: 10px;
+}

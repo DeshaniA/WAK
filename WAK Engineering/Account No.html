@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WAK Engineering</title>
+
+  <!-- Bootstrap css file -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+  <!-- font awesome icons-->
+  <link rel="stylesheet" href="./css/all.min.css">
+
+  <!-- custom css file -->
+ <link rel="stylesheet" href="./css/style.css">
+<style>
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: transparent;
+  padding: 5px 20px 15px 20px;
+  border-radius: 3px;
+}
+.container-left{
+  background-color:transparent;
+  padding: 15px 20px 0px 20px;
+  border: 1px solid black;
+  border-radius: 0px;
+}
+.btn {
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 80%;
+  margin-top: 5%;
+}
+
+.success {background-color: #4CAF50;} /* Green */
+.success:hover {background-color: #46a049;}
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.drop_down_css{
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #2c2c2c;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: #b6b6b6;
+
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid rgb(143, 143, 143);
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #a5a5a5;
+}
+.slide_bar_txt{
+  color:white;
+}
+</style>
+
+</head>
+<body style="background: #00bf8f;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #e2e2e2, #ebebeb);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right,  #e2e2e2, #ebebeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+  <!-- main header start -->
+
+  <div class="container-top">
+      <div class="logo">
+        <a href="./index.html"><img src="./img/logo.PNG" alt="TAD logo" class="TAD-logo"></a>
+      </div>
+      <div class="header-text">
+        <ul class="header-topic">
+          <li class="topic">Work Time</h4>
+          <li class="content">Mon - Sat : 8.30 - 17.00</h6>
+        </ul>
+        <ul class="header-topic">
+          <li class="topic">Hotline</h4>
+          <li class="content">(00)1234-5678</h6>
+        </ul>
+      </div>
+    </div>
+
+    <!-- main header start -->
+
+
+    <!-- navbar start -->
+    <div class="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item  ">
+            <a class="nav-link active-item " href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link item" href="./pages/service.html">Service</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link item" href="project.html">Project</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link item" href="about us.html">About Us</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link item" href="contacts.html">Contact</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link item" href="news.html">News</a>
+          </li>
+          
+        </ul>
+      
+      </div>
+    </nav>
+  </div>
+  <!-- navbar end -->
+<div class="row">
+  <div class="col-25" style="background: #616161;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #9bc5c3, #616161);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #9bc5c3, #616161); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+    <div class="container">
+      <div class="row" style="padding:15% 0% 0% 0%;">
+        <div class="col">
+           <h4  class="slide_bar_txt">Our Service</h4>
+           <h4  class="slide_bar_txt">Refarrals</h4>
+           <h4  class="slide_bar_txt">Reports</h4>
+        </div>
+        <div class="col">
+          <button class="btn success">Add</button>
+          <button class="btn success">Edit</button>
+          <button class="btn success">Delete</button>
+          <button class="btn success">Clear</button>
+          <button class="btn success">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-75">
+    <div class="container">
+        <h6 style="padding-top: 1%;">Home > Attendence > Employee Name</h6>
+        <form action="/action_page.php" style="padding-top: 5%;">
+          <div class="row">
+            <div class="col-50">
+              <h3>Attendence Sheet</h3>
+              <div class="row">
+                <div class="col-50">
+                  <input type="text" id="inTime" name="inTime" placeholder="Account Number">
+                </div>
+                <div class="col-50">
+                  <input type="text" id="inTime" name="inTime" placeholder="">
+                </div>
+                <div class="col-50">
+                  <label>Last Name</label>
+                  <input type="text" id="inTime" name="inTime" placeholder="First Name">
+                </div>
+                <div class="col-50">
+                  <label>First Name</label>
+                  <input type="text" id="inTime" name="inTime" placeholder="Last Name">
+                </div>
+                <div class="col-50">
+                  <label>Other Payment</label>
+                  <select id="time" class="drop_down_css" name="time" placeholder="10001">
+                    <option>Over Time</option>
+                    <option>Over Time</option>
+                    <option>Over Time</option>
+                  </select>
+                </div>
+                <div class="col-50">
+                  <label>Basic Salary</label>
+                  <select id="time" class="drop_down_css" name="time" placeholder="10001">
+                    <option>Basic Salary</option>
+                    <option>Basic Salary</option>
+                    <option>Basic Salary</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+        
+            <div class="col-50">
+              <div class="row" style="padding-top:8%;">
+                <div class="col-50">
+                  <input type="text" id="Branch" name="Branch" placeholder="Branch">
+                </div>
+                <div class="col-50">
+                  <select id="time" class="drop_down_css" name="time" placeholder="10001">
+                    <option>Colombo</option>
+                    <option>Colombo</option>
+                    <option>Colombo</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn success" width="10%">Calculate And Save</button>
+        </form>
+    </div>
+  </div>
+</div>
+
+
+  <!-- contact area start -->
+
+  <div class="contact-area">
+    <div class="social-media">
+
+      <div class="single-icon">
+        <a href="#" class="social-link">
+          <img src="./img/facebook.png" alt="facebook icon" class="icon">
+        </a>
+      </div>
+
+      <div class="single-icon">
+        <a href="#" class="social-link">
+          <img src="./img/twitter.png" alt="twitter icon" class="icon">
+        </a>
+      </div>
+
+      <div class="single-icon">
+        <a href="#" class="social-link">
+          <img src="./img/linkedin.png" alt="linkedin icon" class="icon">
+        </a>
+      </div>
+
+      <div class="single-icon">
+        <a href="#" class="social-link">
+          <img src="./img/instagram.png" alt="instagram icon" class="icon">
+        </a>
+      </div>
+
+      <div class="single-icon">
+        <a href="#" class="social-link">
+          <img src="./img/youtube.png" alt="youtube icon" class="icon">
+        </a>
+      </div>
+
+      <div class="single-icon">
+        <a href="#" class="social-link">
+          <img src="./img/google+.png" alt="google+ icon" class="icon">
+        </a>
+      </div>
+    </div>
+
+
+    <div class="location">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="clogo col-lg-6 col-md-6 col-sm-12">
+            <img src="./img/logo.PNG" alt="TAD Engineering Logo" class="company-logo">
+          </div>
+
+          <div class="contact-about col-lg-6 col-md-6 col-sm-12">
+
+            <div class="single-contact-about">
+              <div class="contact-about-img">
+                <img src="./img/location.png" alt="location icon" class="about-icon">
+              </div>
+              <div class="contact-about-content">
+                <p class="content">No 7, Kandy Road,<br> Kurunagala, Srilanka.</p>
+              </div>
+            </div>
+
+            <div class="single-contact-about">
+              <div class="contact-about-img">
+                <img src="./img/phone.png" alt="phone icon" class="about-icon">
+              </div>
+              <div class="contact-about-content">
+                <p class="content">(00) 12345678</p>
+              </div>
+            </div>
+
+            <div class="single-contact-about">
+              <div class="contact-about-img">
+                <img src="./img/fax.png" alt="fax icon" class="about-icon">
+              </div>
+              <div class="contact-about-content">
+                <p class="content">(00) 12345678</p>
+              </div>
+            </div>
+
+            <div class="single-contact-about">
+              <div class="contact-about-img">
+                <img src="./img/email.png" alt="email icon" class="about-icon">
+              </div>
+              <div class="contact-about-content">
+                <p class="content">wakengineering@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- contact area end -->
+  <!-- footer start -->
+
+  <div class="footer">
+    
+      <div class="footer-text">
+        <p class="footer-name">All Right Reserved | Powered By |</p>
+      </div>
+      <div class="programmer-name">
+        <p class="prog-name">| PROGRAMMERS OF UNIVERS |</p>
+      </div>
+    
+
+  </div>
+
+
+  <!-- footer end -->
+
+  
+
+
+
+
+  <!-- baner js file -->
+  <script src="./js/baner.js"></script>
+
+  <!-- Jquery js file -->
+  <script src="./js/jquery 3.5.1.js"></script>
+
+  <!-- Bootstrap js file -->
+  <script src="./js/bootstrap.min.js"></script>
+</body>
+</html>
