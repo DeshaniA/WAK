@@ -1,0 +1,20 @@
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+/* css variables */
+:root{
+    --primary-color:#3147d1;
+    --primary-color2:#01c8fa;
+    --title-color:#141313;
+    --border-color:#6d6c6c;
+    --gradient-color:linear-gradient(90deg, #3147d1 0%, #01c8fa 100%);
+    --shadow-color:0px 10px 30px rgba(92, 62, 194, 0.432);
+    --box-shadow:0px 10px 30px rgba(57, 56, 61, 0.541);
+
+    /* font family variables */
+    --roboto:'RobotoSlab',cursive;
+}
