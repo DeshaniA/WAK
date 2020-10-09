@@ -9,18 +9,15 @@ class paymentDetails(models.Model):
     address = models.CharField(max_length=255)
     address2 = models.CharField(max_length=255)
     city = models.CharField(max_length=20)
-    AccNo = models.IntegerField()
-    tariff = models.IntegerField()
+    AccNo = models.CharField(max_length=10)
+    tariff = models.CharField(max_length=10)
     unitMon1 = models.IntegerField()
     unitMon2 = models.IntegerField()
     unitMon3 = models.IntegerField()
-    supMon1 = models.IntegerField()
-    supMon2 = models.IntegerField()
-    supMon3 = models.IntegerField()
-    cardNo = models.CharField(max_length=20)
-    cardName = models.CharField(max_length=255)
-    secCode = models.IntegerField()
-    expireDate = models.CharField(max_length=10)
+    supMon1 = models.CharField(max_length=20)
+    supMon2 = models.CharField(max_length=20)
+    supMon3 = models.CharField(max_length=20)
+
 
 
 class cusStatus(models.Model):
