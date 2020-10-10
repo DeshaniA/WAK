@@ -26,10 +26,13 @@ from .views import (
     payment_page,
     firstpaid_page,
     charge,
-    form_page)
+    form_page,
+    logout_request,
+    login_request,
+    domreg,)
 
 urlpatterns = [
-    path('', home_page),
+    path('', home_page,name="home_page"),
     path('form/', form_page),
     path('consultancy/<int:post_id>/', domestic_reg_cust_page),
     path('firstPaid/<str:args>/', firstpaid_page, name="success"),
@@ -39,4 +42,7 @@ urlpatterns = [
     path('business/', business_page),
     path('domestic/', domestic_page),
     path('admin/', admin.site.urls),
+    path("logout/", logout_request, name="logout"),
+    path("login/", login_request, name="login"),
+    path("domreg/",domreg,name="dom_reg_page")
 ]

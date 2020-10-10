@@ -3,9 +3,13 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.http import JsonResponse
 from consultancy.models import paymentDetails
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import login,logout,authenticate
+from django.contrib import messages
 import stripe
 
 stripe.api_key = "sk_test_51HP81IGVpbBrVqWB53exgfmStGw4Zs46SQs66J1UEP0DBXWfkIDn8ixZ9UX8maYH1bzQXJteibey460SlNuaL6e7002DJpYAnF"
+
 
 def home_page(request):
     return render(request, "home.html", {"title": "Energy Consultancy"})
@@ -78,4 +82,54 @@ def firstpaid_page(request, args):
 
 def form_page(request):
     return render(request, "form.html")
+
+
+def logout_request(request):
+    logout(request)
+    messages.info(request, "Logged out successfully!")
+    return redirect("home_page")
+
+def login_request(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(request=request, data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user)
+                messages.info(request, f"You are now logged in as {username}")
+                return render(request,"domreg.html")
+            else:
+                messages.error(request, "Invalid username or password.")
+        else:
+            messages.error(request, "Invalid username or password.")
+    form = AuthenticationForm()
+    return render(request=request,
+                  template_name="login.html",
+                  context={"form": form})
+
+
+def domreg(request):
+    return render(request, "domreg.html")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

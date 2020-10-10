@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'consultancy.apps.ConsultancyConfig'
+    "crispy_forms",
+    'consultancy.apps.ConsultancyConfig',
 ]
 
 MIDDLEWARE = [
@@ -124,6 +125,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
+CRISPY_TEMPLATE_PACK="bootstrap4"
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')

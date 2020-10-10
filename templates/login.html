@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+
+
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container">
+        <br>
+        <h1>Log in</h1>
+        <br>
+        {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == 'success'%}
+                <script>M.toast({html: "{{message}}", classes: 'green rounded', displayLength:2000});</script>
+            {% elif message.tags == 'info'%}
+                <script>M.toast({html: "{{message}}", classes: 'blue rounded', displayLength:2000});</script>
+            {% elif message.tags == 'warning'%}
+                <script>M.toast({html: "{{message}}", classes: 'orange rounded', displayLength:10000});</script>
+            {% elif message.tags == 'error'%}
+                <script>M.toast({html: "{{message}}", classes: 'red rounded', displayLength:10000});</script>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    <div class="container">
+        <form method="POST">{% csrf_token %}
+
+        {{form|crispy}}
+            <button style="background-color:#F4EB16; color:blue" class="btn btn-outline-info" type="submit">Login</button>
+        </form>
+        Admin Login  <a href="/admin" target="blank"><strong>here</strong></a>!
+    </div>
+    </div>
+{% endblock %}
