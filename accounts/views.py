@@ -27,5 +27,11 @@ def contracts(request):
     return render(request, 'accounts/contracts.html', {'services': services})
 
 
-def customer(request):
-    return render(request, 'accounts/customer.html')
+def customer(request, pk_test):
+    customer = Customer.objects.get(id=pk_test)
+
+    contracts=customer.contract_set.all()
+    contract_count=contracts.count()
+
+    context = {'customer': customer, 'contracts': contracts,'contract_count':contract_count}
+    return render(request, 'accounts/customer.html', context)

@@ -19,8 +19,8 @@
 		<div class="card card-body">
 			<h5>Contact Information</h5>
 			<hr>
-			<p>Email: </p>
-			<p>Phone: </p>
+			<p>Email: {{customer.email}}</p>
+			<p>Phone: {{customer.phone}}</p>
 		</div>
 	</div>
 
@@ -28,7 +28,7 @@
 		<div class="card card-body">
 			<h5>Total Contracts</h5>
 			<hr>
-			<h1 style="text-align: center;padding: 10px"></h1>
+			<h1 style="text-align: center;padding: 10px">{{contract_count}}</h1>
 		</div>
 	</div>
 </div>
@@ -61,6 +61,16 @@
 					<th>Remove</th>
 				</tr>
 
+				{% for contract in customers %}
+					<tr>
+						<td>{{contract.service}}</td>
+						<td>{{contract.service.category}}</td>
+						<td>{{contract.date_created}}</td>
+						<td>{{contract.status}}</td>
+						<td><a class="btn btn-sm btn-info" href="">Update</a></td>
+						<td><a class="btn btn-sm btn-danger" href="">Remove</a></td>
+					</tr>
+				{% endfor %}
 			</table>
 		</div>
 	</div>
