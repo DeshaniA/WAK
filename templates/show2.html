@@ -1,0 +1,61 @@
+{% load static %}
+
+<html>
+
+<head>
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet"  type="text/css" href="{% static 'css/style3.css'%}"/>
+
+</head>
+
+
+
+
+<table>
+
+    <form method="POST" action="/search">
+        {%  csrf_token %}
+        <tr>
+            <td><input name="name" >  </td>
+            <td><button type="submit">Search</button></td>
+        </tr>
+    </form>
+
+
+
+
+    <tr>
+    <th>Name_first</th>
+    <th>Name_last</th>
+    <th>In Time</th>
+    <th>Out Time</th>
+    <th>Other Info</th>
+    </tr>
+
+    {% for i in employee %}
+
+    <tr>
+        <td>{{  i.ename_f   }}</td>
+        <td>{{  i.ename_l   }}</td>
+        <td>{{  i.eIntime  }}</td>
+        <td>{{  i.eOuttime  }}</td>
+        <td>{{  i.eOtherinfo  }}</td>
+        <td>
+
+            <button><a href="edit/{{ i.id }}">Edit</a></button>
+        </td>
+        <td>
+            <button><a href="save/{{ i.id }}">save</a></button>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+ <td>
+     <button><a href="{% url 'webpage5' %}">show</a></button>
+ </td>
+
+</html>
+
+

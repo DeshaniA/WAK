@@ -1,0 +1,28 @@
+
+{% load static %}
+
+<html>
+<head>
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet"  type="text/css" href="{% static 'css/style.css'%}"/>
+</head>
+
+<body>
+<h1> welcome to the employee management system </h1>
+
+</body>
+
+<p>
+    <td>
+    <button><a href="load_form"> Add new employee </a></button>
+    </td>
+
+    <td>
+        <button><a href="show"> Show employee details </a></button>
+    </td>
+
+</p>
+</html>
+
+
+

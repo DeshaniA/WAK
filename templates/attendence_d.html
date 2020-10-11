@@ -1,0 +1,49 @@
+{% load static %}
+
+<html>
+
+<head>
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet"  type="text/css" href="{% static 'css/style3.css'%}"/>
+
+</head>
+<h1>ATTENDENCE</h1>
+
+<form method="POST"  action="/update/{{ employee.id }}">
+    {% csrf_token %}
+    <table>
+
+
+        <td><label> Name_first: </label></td>
+        <tr>
+            <td><input name="ename_f" required value="{{ employee.ename_f}}">
+        </td>
+        </tr>
+        <td><label> Name_last: </label></td>
+        <tr>
+            <td><input name="ename_l" required value="{{ employee.ename_l}}">
+        </td>
+        </tr>
+        <td><label> In Time: </label></td>
+        <tr>
+            <td><input name="eIntime" required value="{{ employee.eIntime}}">
+        </td>
+        </tr>
+        <td><label> Out Time: </label></td>
+        <tr>
+            <td><input name="eOuttime" required value="{{ employee.eOuttime}}">
+        </td>
+        </tr>
+        <td><label> Other Info: </label></td>
+        <tr>
+            <td><input name="eOtherinfo" required value="{{ employee.eOtherinfo}}" >
+        </td>
+        </tr>
+        <td>
+            <td><button><a href="{% url 'webpage3' %}">SAVE</a></button></td>
+        <td><button><a href="{% url 'webpage4' %}">Go Next</a></button></td>
+        </tr>
+    </table>
+</form>
+
+</html>

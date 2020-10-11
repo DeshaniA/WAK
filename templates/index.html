@@ -1,0 +1,36 @@
+
+{% load static %}
+
+<html>
+
+<head>
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet"  type="text/css" href="{% static 'css/style2.css'%}"/>
+
+</head>
+
+
+<form method="post"  action="add">
+    {% csrf_token %}
+    <label> Name_first: </label>
+    <div>{{ form.ename_f}}</div>
+
+    <label> Name_last: </label>
+    <div>{{ form.ename_l}}</div>
+
+    <label> Contact: </label>
+    <div>{{ form.econtact}}</div>
+
+    <label> Gender: </label>
+    <div>{{ form.egender}}</div>
+
+    <label> HomeTown: </label>
+    <div>{{ form.ehometown}}</div>
+
+    <div>
+        <button type="submit">Add</button>
+    </div>
+
+</form>
+
+</html>

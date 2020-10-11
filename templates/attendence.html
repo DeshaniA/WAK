@@ -1,0 +1,22 @@
+{% load static %}
+
+<html>
+
+<head>
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet"  type="text/css" href="{% static 'css/style3.css'%}"/>
+
+</head>
+
+<!DOCTYPE html>
+<head>
+    <title> Attendence Page </title>
+</head>
+
+<body>
+    <h1>ATTENDENCE</h1>
+    <button><a href="{% url 'webpage3' %}">show details</a></button>
+</body>
+</html>
+
+
