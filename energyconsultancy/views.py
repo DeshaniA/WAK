@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.http import JsonResponse
-from consultancy.models import paymentDetails
+from consultancy.models import paymentDetails,cusDetails
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login,logout,authenticate
 from django.contrib import messages
@@ -111,7 +111,7 @@ def login_request(request):
 
 
 def domreg(request):
-    return render(request, "domreg.html")
+    return render(request, "domreg.html",{})
 
 
 

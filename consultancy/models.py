@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 
 class paymentDetails(models.Model):
     fName = models.CharField(max_length=255)
@@ -28,6 +28,7 @@ class cusStatus(models.Model):
 
 
 class cusDetails(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="cusdetails", null=True)
     cusName = models.CharField(max_length=255)
     projDetails = models.CharField(max_length=20000)
     location = models.CharField(max_length=100)

@@ -2,16 +2,80 @@
 
 {% block content %}
 
+<style>
+.container {
+  height: 200px;
+  position: relative;
+
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+ }
+
+.card{
+    height: 200px;
+    position: relative;
+    border: 3px solid black;
+
+}
+</style>
+
+
+      <h3>Energy Consultancy</h3>
+
+            <div class="container">
+                  {% for cd in user.cusdetails.all%}
+                    <p>{{ cd.projDetails }}</p>
+                  {% endfor %}
+                  <ul>
+                      {% for cd in user.cusdetails.all%}
+                        <li>Location - {{ cd.location }}</li>
+                        <li>Total - Rs.{{ cd.totPrice }}</li>
+                      {% endfor %}
+                    </ul>
+            </div>
+
+
+
+
+<div class="container">
+<br>
 <div class="card-deck">
   <div class="card">
       <div class="card-body">
-          <h5 class="card-title">Domestic Place</h5>
-          <p class="card-text">In this Category we will do our energy consultancy for your domestic places.
-
-            Press Submit button if you need energy consultancy to be done in your domestic place.</p>
-
+          <h5 class="card-title">Stage One</h5>
+          {% for cusd in user.cusdetails.all%}
+          <p class="card-text">In stage one you have to pay 30% from the total Payment. The payment that should pay is Rs.{{ cusd.stageOnePrice }}</p>
+          {% endfor %}
     </div>
   </div>
+
+    <div class="card">
+      <div class="card-body">
+          <h5 class="card-title">Stage Two</h5>
+          {% for cusd in user.cusdetails.all%}
+          <p class="card-text">In stage two you have to pay 30% from the total Payment. The payment that should pay is Rs.{{ cusd.stageTwoPrice }}</p>
+           {% endfor %}
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-body">
+          <h5 class="card-title">Stage Three</h5>
+          {% for cusd in user.cusdetails.all%}
+          <p class="card-text">In stage Three you have to pay 40% from the total Payment. The payment that should pay is Rs.{{ cusd.stageThreePrice }}</p>
+          {% endfor %}
+    </div>
+  </div>
+</div>
+</div>
+
 
 
 
