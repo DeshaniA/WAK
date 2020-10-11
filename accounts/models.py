@@ -49,3 +49,5 @@ class Contract(models.Model):
     date_created = models.DateTimeField(auto_now_add=True, null=True)
     status = models.CharField(max_length=200, null=True, choices=STATUS)
 
+    def __str__(self):
+        return self.service.name

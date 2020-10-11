@@ -6,4 +6,9 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('contracts/', views.contracts, name="contracts"),
     path('customer/<str:pk_test>/', views.customer, name="customer"),
+
+    path('create_contract/<str:pk>/', views.createContract, name="create_contract"),
+    path('update_contract/<str:pk>/', views.updateContract, name="update_contract"),
+    path('delete_contract/<str:pk>/', views.deleteContract, name="delete_contract"),
+
 ]
