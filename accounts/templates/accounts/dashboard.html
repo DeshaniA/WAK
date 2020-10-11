@@ -14,10 +14,18 @@
 			<a class="btn btn-primary  btn-sm btn-block" href="">Create Customer</a>
 			<table class="table table-sm">
 				<tr>
-					<th></th>
+
 					<th>Customer ID</th>
 					<th>Phone</th>
 				</tr>
+
+				{% for customer in customers %}
+					<tr>
+
+						<td>{{customer.name}}</td>
+						<td>{{customer.phone}}</td>
+					</tr>
+				{% endfor %}
 
 			</table>
 		</div>
@@ -31,11 +39,22 @@
 			<table class="table table-sm">
 				<tr>
 					<th>Service</th>
-					<th>Deadline</th>
+					<th>Contract Created Date</th>
 					<th>Status</th>
 					<th>Update</th>
 					<th>Remove</th>
 				</tr>
+
+				{% for contract in contracts %}
+					<tr>
+
+						<td>{{contract.service}}</td>
+						<td>{{contract.date_created}}</td>
+						<td>{{contract.status}}</td>
+						<td><a href="">Update</a></td>
+						<td><a href="">Delete</a></td>
+					</tr>
+				{% endfor %}
 		
 			</table>
 		</div>
