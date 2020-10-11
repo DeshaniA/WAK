@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
+    {% load static %}
+
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet"  type="text/css" href="{% static 'css/style3.css'%}"/>
+
+
 </head>
 <body>
 <h1>FINANCE DETAILS</h1>
-    <button><a href="{% url 'webpage1' %}">SAVE</a></button>
+    <button><a href="{% url 'webpage5' %}">Views</a></button>
 </body>
 </html>

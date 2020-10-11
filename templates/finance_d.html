@@ -1,0 +1,54 @@
+{% load static %}
+
+<html>
+
+<head>
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet"  type="text/css" href="{% static 'css/style3.css'%}"/>
+
+</head>
+<h1>FINANCE</h1>
+
+<table>
+
+
+        <td><label> accountNo: </label></td>
+        <tr>
+            <td><input name="eaccountNo" required value="{{ employee.eaccountNo}}">
+        </td>
+        </tr>
+        <td><label> Branch: </label></td>
+        <tr>
+            <td><input name="ebranch" required value="{{ employee.ebranch}}">
+        </td>
+        </tr>
+        <td><label> Name_f: </label></td>
+        <tr>
+            <td><input name="ename_f" required value="{{ employee.ename_f}}">
+        </td>
+        </tr>
+        <td><label> Name_l: </label></td>
+        <tr>
+            <td><input name="ename_l" required value="{{ employee.ename_l}}">
+        </td>
+        </tr>
+        <td><label> salary: </label></td>
+        <tr>
+            <td><input name="esalary" required value="{{ employee.esalary}}" >
+        </td>
+        </tr>
+        <td><label> Extra payments: </label></td>
+        <tr>
+            <td><input name="epaymentextra" required value="{{ employee.epaymentextra}}" >
+        </td>
+        </tr>
+        <tr>
+        <td><button><a href="{% url 'webpage6' %}">Save</a></button></td>
+        </tr>
+
+    </table>
+
+
+
+
+</html>

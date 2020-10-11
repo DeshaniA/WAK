@@ -1,0 +1,51 @@
+{% load static %}
+
+<html>
+
+<head>
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet"  type="text/css" href="{% static 'css/style3.css'%}"/>
+
+</head>
+
+
+
+
+<table>
+
+    <tr>
+    <th>accountNo</th>
+    <th>Branch</th>
+    <th>Name_f</th>
+    <th>Name_l</th>
+    <th>salary</th>
+        <th>Extra payments</th>
+    </tr>
+
+    {% for i in employee %}
+
+    <tr>
+        <td>{{  i.eaccountNo   }}</td>
+        <td>{{  i.ebranch   }}</td>
+        <td>{{  i.ename_f  }}</td>
+        <td>{{  i.ename_l  }}</td>
+        <td>{{  i.esalary  }}
+        <td>{{  i.epaymentextra  }}</td>
+
+       <td>
+
+            <button><a href="edit/{{ i.id }}">Edit</a></button>
+        </td>
+        <td>
+            <button><a href="delete/{{ i.id }}">Delete</a></button>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+ <td>
+     <button><a href="{% url 'webpage1' %}">Go Home</a></button>
+ </td>
+
+</html>

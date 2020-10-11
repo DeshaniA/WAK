@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import Employee
 from .form import EmployeeForm
+from .models import Time
+from .form import TimeForm
 
 def welcome(request):
     return render(request, "welcome.html")
@@ -40,7 +42,5 @@ def search(request):
     employee = Employee.objects.filter(ename_f__icontains=given_name)
     return render(request, 'show.html', {'employee':employee})
 
-def save(request):
-    given_name = request.POST['name']
-    employee = Employee.objects.filter(ename_f__icontains=given_name)
-    return render(request, 'show2.html', {'employee':employee})
+
+
