@@ -13,4 +13,96 @@ background:#6495ED;
     width: 100%;
     height: 100%;
 }
+    input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+label{
+color:white;
+font-size:15px;
+font-wight:500;
+font-family: 'Hind Siliguri', sans-serif;
+}
+.btn {
+  border: none;
 
+   cursor: pointer;
+   width:20%;
+   text-decoration:none;
+   color: white;
+   font-size: 16px;
+}
+
+.success {background-color: #4CAF50;} /* Green */
+.success:hover {background-color: #46a049;}
+.filter_table_input {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+.search
+{
+width:50%;
+color:white;
+background-color:green;
+border:none;
+padding:4%  5% 4% 5%;
+}
+.header{
+font-size:20px;
+ background-color: #02222B;
+line-height:202%;
+ color:white;
+font-family: 'Hind Siliguri', sans-serif;
+}
+.R_table{
+padding-right:5%;
+padding-left:5%;
+width:100%;
+font-family: 'Hind Siliguri', sans-serif;
+padding-left:5%;
+}
+.fill td{
+background-color:#003E4F;
+color:white;
+padding-left:1%;
+}
+.edit{
+width:80%;
+border:none;
+border-radius:1px;
+background-color:green;
+}
+.edit a{
+color:white;
+text-decoration:none;
+}
+
+.delete{
+width:80%;
+border:none;
+border-radius:1px;
+background-color:red;
+}
+.delete a{
+color:white;
+text-decoration:none;
+}
+.btn_a{
+margin-left:5%;
+}
+.btn_a a{
+color:white;
+text-decoration:none;
+font-size:20px;
+font-wight:500;
+font-family: 'Hind Siliguri', sans-serif;
+}

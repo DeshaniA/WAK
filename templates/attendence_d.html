@@ -4,46 +4,72 @@
 
 <head>
     <title>{% block title %} {% endblock %}</title>
-    <link rel="stylesheet"  type="text/css" href="{% static 'css/style3.css'%}"/>
+    <link rel="stylesheet"  type="text/css" href="{% static 'css/style2.css'%}"/>
+<style>
 
+        .input {
+  width: 240%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.form_btn{
+background-color: #4CAF50;
+  color: white;
+  padding: 4px 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;}
+  .form_btn a{
+  color:white;
+text-decoration:none;
+font-size:20px;
+font-wight:500;
+font-family: 'Hind Siliguri', sans-serif;
+  }
+</style>
 </head>
-<h1>ATTENDENCE</h1>
+<h1 style="color:white;text-align:center;padding-top:5%">ATTENDENCE</h1>
 
-<form method="POST"  action="/update/{{ employee.id }}">
+<div style="padding-left:30%;padding-right:30%;padding-top:0%;">
+
+<form method="POST"  action="/update/{{ employee.id }}" style="background-color:#007969;padding:2%;border-radius:2px;">
     {% csrf_token %}
     <table>
 
 
         <td><label> Name_first: </label></td>
         <tr>
-            <td><input name="ename_f" required value="{{ employee.ename_f}}">
+            <td><input name="ename_f" required value="{{ employee.ename_f}}" class="input">
         </td>
         </tr>
         <td><label> Name_last: </label></td>
         <tr>
-            <td><input name="ename_l" required value="{{ employee.ename_l}}">
+            <td><input name="ename_l" required value="{{ employee.ename_l}}" class="input">
         </td>
         </tr>
         <td><label> In Time: </label></td>
         <tr>
-            <td><input name="eIntime" required value="{{ employee.eIntime}}">
+            <td><input name="eIntime" required value="{{ employee.eIntime}}" class="input">
         </td>
         </tr>
         <td><label> Out Time: </label></td>
         <tr>
-            <td><input name="eOuttime" required value="{{ employee.eOuttime}}">
+            <td><input name="eOuttime" required value="{{ employee.eOuttime}}" class="input">
         </td>
         </tr>
         <td><label> Other Info: </label></td>
         <tr>
-            <td><input name="eOtherinfo" required value="{{ employee.eOtherinfo}}" >
+            <td><input name="eOtherinfo" required value="{{ employee.eOtherinfo}}" class="input">
         </td>
         </tr>
         <td>
-            <td><button><a href="{% url 'webpage5' %}">show</a> </button></td>
-        <td><button><a href="{% url 'webpage4' %}">Go Next</a></button></td>
+            <td><button class="form_btn"><a href="{% url 'webpage5' %}">show</a> </button></td>
+        <td><button class="form_btn"><a href="{% url 'webpage4' %}">Go Next</a></button></td>
         </tr>
     </table>
 </form>
-
+</div>
 </html>

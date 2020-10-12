@@ -4,7 +4,7 @@
 
 <head>
     <title>{% block title %} {% endblock %}</title>
-    <link rel="stylesheet"  type="text/css" href="{% static 'css/style3.css'%}"/>
+    <link rel="stylesheet"  type="text/css" href="{% static 'css/style2.css'%}"/>
 
 </head>
 
@@ -14,8 +14,8 @@
 </head>
 
 <body>
-    <h1>ATTENDENCE</h1>
-    <button><a href="{% url 'webpage3' %}">show details</a></button>
+   <h1 style="color:white;text-align:center;padding-top:5%"> ATTENDENCE</h1>
+  <center> <button type="submit" style="width:40%; background-color:black;border-radius:2%;border:none;color:white;font-weight:500;font-size:30px;"><a href="{% url 'webpage3' %}" style="color:white;text-decoration:none;">show details<br/><br/></a></button></center>
 </body>
 </html>
 

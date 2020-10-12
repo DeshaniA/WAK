@@ -5,37 +5,40 @@
 
 <head>
     <title>{% block title %} {% endblock %}</title>
-    <link rel="stylesheet"  type="text/css" href="{% static 'css/style3.css'%}"/>
+    <link rel="stylesheet"  type="text/css" href="{% static 'css/style2.css'%}"/>
 
 </head>
 
 
 
 
-<table>
 
-    <form method="POST" action="/search">
+    <form method="POST" action="/search" style="padding-top:5%;padding-right:5%;padding-left:5%;">
         {%  csrf_token %}
+        <table width="100%">
         <tr>
-            <td><input name="name" >  </td>
-            <td><button type="submit">Search</button></td>
+            <td><input name="name" class="filter_table_input" >  </td>
+            <td><button type="submit" class="search" >Search</button></td>
         </tr>
+            </table>
     </form>
 
 
 
-
-    <tr>
+<table class="R_table">
+    <tr class="header">
     <th>Name_first</th>
     <th>Name_last</th>
     <th>contact</th>
     <th>gender</th>
     <th>hometown</th>
+        <th></th>
+        <th></th>
     </tr>
 
     {% for i in employee %}
 
-    <tr>
+    <tr class="fill">
         <td>{{  i.ename_f   }}</td>
         <td>{{  i.ename_l   }}</td>
         <td>{{  i.econtact  }}</td>
@@ -43,10 +46,10 @@
         <td>{{  i.ehometown   }}</td>
         <td>
 
-            <button><a href="edit/{{ i.id }}">Edit</a></button>
+            <button class="edit" ><a href="edit/{{ i.id }}" >Edit</a></button>
         </td>
         <td>
-            <button><a href="delete/{{ i.id }}">Delete</a></button>
+            <button class="delete"><a href="delete/{{ i.id }}">Delete</a></button>
         </td>
     </tr>
     {% endfor %}
@@ -54,7 +57,7 @@
 </table>
 
  <td>
-     <button><a href="{% url 'webpage2' %}">GO TO ATTENDENCE</a></button>
+     <button class="btn success btn_a" ><a href="{% url 'webpage2' %}">GO TO ATTENDENCE</a></button>
  </td>
 
 </html>

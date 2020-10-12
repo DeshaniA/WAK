@@ -5,23 +5,43 @@
 <head>
     <title>{% block title %} {% endblock %}</title>
     <link rel="stylesheet"  type="text/css" href="{% static 'css/style.css'%}"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
+    <style>
+.btn {
+  border: none;
+  padding: 14px 0px;
+  cursor: pointer;
+width:30%;
+}
+.btn a{
+ text-decoration:none;
+ color: white;
+   font-size: 16px;
+
+ }
+
+.success {background-color: #4CAF50;} /* Green */
+.success:hover {background-color: #46a049;}
+.danger {background-color: #f44336;} /* Red */
+.danger:hover {background: #da190b;}
+    </style>
 </head>
 
 <body>
-<h1> welcome to the employee management system </h1>
+<h1 style="color:white;text-align:center;padding-top:5%"> welcome to the employee management system </h1>
+
+<center>
+  <button type="button" class="btn success" ><a href="load_form">Add new employee</a></button>
+  <button type="button" class="btn danger"><a href="show"> Show employee details </a></button>
+</center>
+
+
 
 </body>
-
-<p>
-    <td>
-    <button><a href="load_form"> Add new employee </a></button>
-    </td>
-
-    <td>
-        <button><a href="show"> Show employee details </a></button>
-    </td>
-
-</p>
 </html>
 
 
