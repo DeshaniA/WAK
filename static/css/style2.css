@@ -70,11 +70,21 @@ width:100%;
 font-family: 'Hind Siliguri', sans-serif;
 padding-left:5%;
 }
+
+.table{
+padding-right:5%;
+padding-left:5%;
+width:100%;
+font-family: 'Hind Siliguri', sans-serif;
+padding-left:5%;
+}
+
 .fill td{
 background-color:#003E4F;
 color:white;
 padding-left:1%;
 }
+
 .edit{
 width:80%;
 border:none;
