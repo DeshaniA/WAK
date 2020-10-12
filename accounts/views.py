@@ -7,15 +7,20 @@ from django.contrib.auth import authenticate, login, logout
 
 from django.contrib import messages
 
+from django.contrib.auth.decorators import login_required
+#from django.contrib.auth.models import Group
+
 # Create your views here.
 from .models import *
 from .forms import ContractForm, CreateUserForm
+#from .decorators import unauthenticated_user, allowed_users, admin_only
 
 
+#@unauthenticated_user
 def registerPage(request):
-    #if request.user.is_authenticated:
-     #   return redirect('home')
-    #else:
+    if request.user.is_authenticated:
+        return redirect('home')
+    else:
         form = CreateUserForm()
         if request.method == 'POST':
             form = CreateUserForm(request.POST)
@@ -29,11 +34,11 @@ def registerPage(request):
         context = {'form': form}
         return render(request, 'accounts/register.html', context)
 
-
+#@unauthenticated_user
 def loginPage(request):
-   # if request.user.is_authenticated:
-    #    return redirect('home')
-    #else:
+    if request.user.is_authenticated:
+        return redirect('home')
+    else:
         if request.method == 'POST':
             username = request.POST.get('username')
             password = request.POST.get('password')
@@ -55,6 +60,8 @@ def logoutUser(request):
     return redirect('login')
 
 
+@login_required(login_url='login')
+#@admin_only
 def home(request):
     contracts = Contract.objects.all()
     customers = Customer.objects.all()
@@ -72,12 +79,21 @@ def home(request):
     return render(request, 'accounts/dashboard.html', context)
 
 
+def userPage(request):
+    context = {}
+    return render(request, 'accounts/user.html', context)
+
+
+@login_required(login_url='login')
+#allowed_users(allowed_roles=['admin'])
 def contracts(request):
     services = Service.objects.all()
 
     return render(request, 'accounts/contracts.html', {'services': services})
 
 
+@login_required(login_url='login')
+#@allowed_users(allowed_roles=['admin'])
 def customer(request, pk_test):
     customer = Customer.objects.get(id=pk_test)
 
@@ -88,6 +104,8 @@ def customer(request, pk_test):
     return render(request, 'accounts/customer.html', context)
 
 
+@login_required(login_url='login')
+#@allowed_users(allowed_roles=['admin'])
 def createContract(request, pk):
     ContractFormSet=inlineformset_factory(Customer, Contract, fields=('service', 'status'))
     customer=Customer.objects.get(id=pk)
@@ -105,6 +123,8 @@ def createContract(request, pk):
     return render(request, 'accounts/contract_form.html', context)
 
 
+@login_required(login_url='login')
+#@allowed_users(allowed_roles=['admin'])
 def updateContract(request, pk):
 
     contract = Contract.objects.get(id=pk)
@@ -120,6 +140,8 @@ def updateContract(request, pk):
     return render(request, 'accounts/contract_form.html', context)
 
 
+@login_required(login_url='login')
+#@allowed_users(allowed_roles=['admin'])
 def deleteContract(request, pk):
     contract = Contract.objects.get(id=pk)
     if request.method == "POST":
