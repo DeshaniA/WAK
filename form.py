@@ -1,6 +1,7 @@
 from django import forms
 from .models import Employee
 from .models import Time
+from .models import Salary
 
 class EmployeeForm(forms.ModelForm):
     class Meta:
@@ -13,3 +14,7 @@ class TimeForm(forms.ModelForm):
         fields = "__all__"
 
 
+class SalaryForm(forms.ModelForm):
+    class Meta:
+        model = Salary
+        fields = "__all__"

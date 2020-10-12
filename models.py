@@ -15,7 +15,13 @@ class Time(models.Model):
     eOuttime = models.CharField(max_length=20)
     eOtherinfo = models.CharField(max_length=20)
 
-
+class Salary(models.Model):
+    eaccountNo = models.CharField(max_length=12)
+    ebranch = models.CharField(max_length=50)
+    ename_f = models.CharField(max_length=50)
+    ename_l = models.CharField(max_length=50)
+    esalary = models.CharField(max_length=20)
+    epaymentextra = models.CharField(max_length=20)
 
 
 
