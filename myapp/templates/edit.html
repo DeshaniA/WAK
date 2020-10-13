@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="POST" action="/update/{{ supplier.id }}">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td><input name="eid" required value="{{ supplier.eid }}">
+            </td>
+        </tr>
+        <tr>
+            <td><input name="ename" required value="{{ supplier.ename }}">
+            </td>
+        </tr>
+        <tr>
+            <td><input name="sname" required value="{{ supplier.sname }}">
+            </td>
+        </tr>
+        <tr>
+            <td><input name="pname" required value="{{ supplier.pname }}">
+            </td>
+        </tr>
+        <tr>
+            <td><input name="sprice" required value="{{ supplier.sprice }}">
+            </td>
+        </tr>
+        <tr>
+            <td><input name="eemail" required value="{{ supplier.eemail }}">
+            </td>
+        </tr>
+        <tr>
+            <td><input name="econtact" required value="{{ supplier.econtact }}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">Update</button>
+            </td>
+        </tr>
+
+    </table>
+
+</form>
+
+{% endblock %}

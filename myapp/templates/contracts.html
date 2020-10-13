@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<form method="POST" action="added">
+    {% csrf_token %}
+    <label>Supplier ID:</label>
+    <div>{{ form.cid }}</div>
+    <label>Company Name:</label>
+    <div>{{ form.cname }}</div>
+    <label>Contract Amount:</label>
+    <div>{{ form.camount }}</div>
+    <label>Products:</label>
+    <div>{{ form.cproduct }}</div>
+    <label>Start Date:</label>
+    <div>{{ form.sdate }}</div>
+    <label>End Date:</label>
+    <div>{{ form.edate }}</div>
+    <div>
+        <button type="submit">Add</button>
+    </div>
+
+</form>
+
+{% endblock %}

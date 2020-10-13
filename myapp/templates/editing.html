@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="POST" action="/updated/{{ rating.id }}">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td><input name="vname" required value="{{ rating.vname }}">
+            </td>
+        </tr>
+        <tr>
+            <td><input name="vproduct" required value="{{ rating.vproduct }}">
+            </td>
+        </tr>
+        <tr>
+            <td><input name="quality" required value="{{ rating.quality }}">
+            </td>
+        </tr>
+        <tr>
+            <td><input name="rdeli" required value="{{ rating.rdeli }}">
+            </td>
+        </tr>
+        <tr>
+            <td><input name="rprice" required value="{{ rating.rprice }}">
+            </td>
+        </tr>
+        <tr>
+            <td><input name="service" required value="{{ rating.service }}">
+            </td>
+        </tr>
+        <tr>
+            <td><input name="risk" required value="{{ rating.risk }}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">Update</button>
+            </td>
+        </tr>
+
+    </table>
+
+</form>
+
+{% endblock %}

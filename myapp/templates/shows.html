@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<table class="table table-striped">
+
+    <tr>
+    <th>Product ID</th>
+    <th>Product Name</th>
+    <th>Product Price</th>
+    <th>Supplier Name</th>
+    <th>Supplier Company Name</th>
+    <th>Products Discription</th>
+    </tr>
+
+    {% for i in product %}
+    <tr>
+        <td>{{ i.pid }}</td>
+        <td>{{ i.prname }}</td>
+        <td>{{ i.price }}</td>
+        <td>{{ i.suname }}</td>
+        <td>{{ i.scname }}</td>
+        <td>{{ i.dis }}</td>
+        <td>
+            <a href="edits/{{ i.id }}">Edit</a>
+        </td>
+        <td>
+            <a href="deletes/{{ i.id }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

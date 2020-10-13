@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="POST" action="/updates/{{ contract.id }}">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td><input name="cid" required value="{{ contract.cid }}">
+            </td>
+        </tr>
+        <tr>
+            <td><input name="cname" required value="{{ contract.cname }}">
+            </td>
+        </tr>
+        <tr>
+            <td><input name="camount" required value="{{ contract.camount }}">
+            </td>
+        </tr>
+        <tr>
+            <td><input name="cproduct" required value="{{ contract.cproduct }}">
+            </td>
+        </tr>
+        <tr>
+            <td><input name="sdate" required value="{{ contract.sdate }}">
+            </td>
+        </tr>
+        <tr>
+            <td><input name="edate" required value="{{ contract.edate }}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">Update</button>
+            </td>
+        </tr>
+
+    </table>
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<table class="table table-striped">
+
+    <tr>
+    <th>Supplier ID</th>
+    <th>Company Name</th>
+    <th>Contract Amount</th>
+    <th>Products</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    </tr>
+
+    {% for i in contract %}
+    <tr>
+        <td>{{ i.cid }}</td>
+        <td>{{ i.cname }}</td>
+        <td>{{ i.camount }}</td>
+        <td>{{ i.cproduct }}</td>
+        <td>{{ i.sdate }}</td>
+        <td>{{ i.edate }}</td>
+        <td>
+            <a href="edited/{{ i.id }}">Edit</a>
+        </td>
+        <td>
+            <a href="deleted/{{ i.id }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<form method="POST" action="add">
+    {% csrf_token %}
+    <label>Supplier ID:</label>
+    <div>{{ form.eid }}</div>
+    <label>Supplier Name:</label>
+    <div>{{ form.ename }}</div>
+    <label>Supplier Company Name:</label>
+    <div>{{ form.sname }}</div>
+    <label>Product Name:</label>
+    <div>{{ form.pname }}</div>
+    <label>Product Price:</label>
+    <div>{{ form.sprice }}</div>
+    <label>Email:</label>
+    <div>{{ form.eemail }}</div>
+    <label>Contact Number:</label>
+    <div>{{ form.econtact }}</div>
+    <div>
+        <button type="submit">Add</button>
+    </div>
+
+</form>
+
+{% endblock %}
